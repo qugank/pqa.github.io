@@ -1,2 +1,2 @@
-# PQA
-Official code and dataset of perceptual question answering (PQA)
+# PQA: Perceptual Question Answering
+A largescale Perceptual Question Answering dataset.
