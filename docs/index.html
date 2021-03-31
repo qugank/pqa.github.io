@@ -123,11 +123,37 @@
                 Avg Slots represents the percentage of question-grid needed to be modified to form a correct answer.
             </p>
 
+            <h4 class="w3-left-align"><b>Framework Design</b></h4>
+            <div class="w3-content w3-center" style="max-width:850px">
+                <img src="network.svg" alt="network" style="width:600px" />
+                <p>
+                    Figure 4.
+                    Our framework. 
+                    The encoder takes test question embedding, positional encoding and context embedding as inputs,
+                     where context embedding is given by a context encoder, providing clues about the implied law in an example PQA pair, and the positional encoding adapts to the 2D case. 
+                    The decoder can generate an answer-grid by predicting all symbols at every location in parallel.
+                </p>
+            </div>
+
+            <p>
+                As shown in Figure 4, our proposed network is an encoder-decoder architecture which is tailored from Transformer. 
+                In general, the encoder is a stack of N identical layers, and each layer takes inputs from three sources: 
+                (i) test question embedding (the first layer) or output of last layer (the other layers), (ii) positional encoding and (iii) context embedding.
+                The decoder then generates an answer-grid by predicting all symbols at every location of the grid.
+
+                There are three fundamental components in our transformer architecture: 
+                (i) A context embedding module based on self-attention mechanism that is used to encode exemplar PA grid pairs which itself is a part of the input fed into the input encoder. 
+                This plays a significant role in inferring the implicit Gestalt law and later generalizing onto the new test question. 
+                (ii) We extend positional encoding to adapt to 2D grids-case instead of working on 1D sequence-case, as the 2D locations of symbols are of crucial importance for our problem. 
+                (iii) As ours is a 2D grid-to-grid mapping problem, the decoder is tailored to predict all symbols in parallel, i.e., 
+                all the color grids are produced in one pass to form an answer instead of one output at a time. 
+            </p>
+
             <h3 class="w3-left-align" id="publication"><b>Experiment Results</b></h3>
 
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="result.svg" alt="result" style="width:600px" />
-                <p> Figure 4. Testing results on varying training data volume. </p>
+                <p> Figure 5. Testing results on varying training data volume. </p>
             </div>
 
             <div class="w3-content w3-center" style="max-width:850px">
@@ -237,7 +263,7 @@
                 Furthermore TD+H-CNN achieves result comparable to ours on T4.
                 To further evaluate the training efficiency of each model, we provide different amounts of data for
                 training.
-                We can observe from Figure4 that the scale of training data significantly affects model's performance.
+                We can observe from Figure5 that the scale of training data significantly affects model's performance.
                 Unlike our model, humans can learn the task-specific rule from very limited examples.
                 Basically all methods would nearly fail if we reduce the amount of training data to 15% of PQA pairs per
                 task.
