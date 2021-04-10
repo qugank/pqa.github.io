@@ -4,7 +4,7 @@
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title>PQA: Perceptual Question Answering</title>
-    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="w3.css">
 </head>
 
 <body>
@@ -14,34 +14,46 @@
 
     <div class="w3-container">
         <div class="w3-content" style="max-width:1080px">
-
             <div class="w3-content w3-center" style="max-width:850px">
                 <h2 id="title"><b>PQA: Perceptual Question Answering</b></h2>
-                <br />
                 <p>
-                        <a target="_blank" href="https://qugank.github.io/">Yonggang Qi</a><sup>1*</sup>
+                    <a href="https://qugank.github.io/" target="_blank" style="color:#007bff">Yonggang Qi</a>
+                    <sup style="color:#007bff">1*</sup>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a target="_blank">Kai Zhang</a><sup>1*</sup>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a target="_blank">Aneeshan Sain</a><sup>2</sup>
                     &nbsp;&nbsp;&nbsp;&nbsp;
                     <a target="_blank">Yi-Zhe Song</a><sup>2</sup>
-                    &nbsp;&nbsp;&nbsp;&nbsp;
                 </p>
                 <p>
                     <sup>1</sup>Beijing University of Posts and Telecommunications, CN
                     &nbsp; &nbsp; &nbsp;
                     <sup>2</sup>SketchX, CVSSP, University of Surrey, UK
-                    &nbsp; &nbsp; &nbsp;
                 </p>
+                <div class="w3-content w3-center" style="max-width:850px">
+                    <a href="https://github.com/qugank/PQA" target="_blank">
+                            <img src="PQA.png" alt="front" style="width:50px"/></a>
+                    &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
+                    <a href="https://drive.google.com/file/d/1OemRMUogRpvQ257de9JA_4NZJwRLyMLb/view?usp=sharing" target="_blank">
+                            <img src="database.svg" alt="front" style="width:50px"/></a>
+                    &emsp;&emsp;&emsp;&emsp;
+                    <a href="https://github.com/qugank/PQA/code" target="_blank">
+                            <img src="github.png" alt="front" style="width:50px"/></a>
+                    <p>
+                        <b>Paper</b>
+                        &emsp;&emsp;&emsp;&emsp;
+                        <b>Dataset</b>
+                        &emsp;&emsp;&emsp;&emsp;
+                        <b>Code</b>
+                    </p>
+                </div>
             </div>
-
-            <div class="w3-content w3-center" style="max-width:850px"> CVPR 2021</div>
 
             <br>
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="front-v2.svg" alt="front" />
-                <p>Figure 1. Perceptual Question and Answer (PQA). Given an exemplar PQA pair (Left), a new question
+                <p>Figure 1. Perceptual Question and Answer (PQA). Given an ex-emplar PQA pair (Left), a new question
                     (right) is required to be addressed, i.e. generate answer-grid from scratch.</p>
             </div>
             <br>
@@ -55,90 +67,190 @@
                 Upon observing example perceptual question-answer pairs, the goal for PQA is to solve similar questions by generating answers entirely from scratch (see Figure 1). 
                 Our first contribution is therefore the first dataset of perceptual question-answer pairs, each generated specifically for a particular Gestalt principle. 
                 We then borrow insights from human psychology to design an agent that casts perceptual organization as a self-attention problem, where a proposed grid-to-grid mapping network directly generates answer patterns from scratch. 
-                Experiments show our agent to outperform a selection of naive and strong baselines. A human study however indicates that ours uses astronomically more data to learn when compared to an average human, necessitating future research (with or without our dataset).
+                Experiments show our agent to outperform a selection of naive and strong baselines. 
             </p>
 
-
             <h3 class="w3-left-align"><b>Dataset</b></h3>
-<!--            <h4 class="w3-left-align"><b>Preview</b></h4>-->
+            <h4 class="w3-left-align"><b>Preview</b></h4>
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="dataset-v2.svg" alt="dataset" style="width:500px" />
                 <p>Figure 2. PQA Dataset. Each row from (a) to (g) corresponds to a specific Gestalt law, and a few
                     examples of PQA pair with question (left) and answer (right) are visualized. Zoom in for better
                     visualization.</p>
             </div>
-<!--            <h4 class="w3-left-align"><b>Statistic</b></h4>-->
-<!--            <div class="w3-cell-row">-->
 
-<!--                <div class="w3-container w3-cell w3-cell-middle">-->
-<!--                    <div class="w3-content w3-center">-->
-<!--                        <img src="statistic.svg" alt="statistic"  style="width:80%"/>-->
-<!--                        <p>-->
-<!--                            Figure 3.-->
-<!--                            (a) Distribution of key region loca-tions. -->
-<!--                            (b) Distribution of grid size.-->
-<!--                        </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--              -->
-<!--                <div class="w3-container w3-cell w3-cell-middle">-->
-<!--                    <div class="w3-content w3-center" style="width:120%" >-->
-<!--                        <table class="w3-table w3-bordered w3-border">-->
-<!--                            <tr>-->
-<!--                                <th>Tasks </th>-->
-<!--                                <th>T<sup>1</sup></th>-->
-<!--                                <th>T<sup>2</sup></th>-->
-<!--                                <th>T<sup>3</sup></th>-->
-<!--                                <th>T<sup>4</sup></th>-->
-<!--                                <th>T<sup>5</sup></th>-->
-<!--                                <th>T<sup>6</sup></th>-->
-<!--                                <th>T<sup>7</sup></th>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Avg Symbols</td>-->
-<!--                                <td>2.0</td>-->
-<!--                                <td>2.0</td>-->
-<!--                                <td>5.0</td>-->
-<!--                                <td>2.0</td>-->
-<!--                                <td>5.0</td>-->
-<!--                                <td>3.0</td>-->
-<!--                                <td>5.0</td>-->
-<!--                            </tr>-->
-<!--                            <tr>-->
-<!--                                <td>Avg Slots (%)</td>-->
-<!--                                <td>12.9</td>-->
-<!--                                <td>3.6</td>-->
-<!--                                <td>4.0</td>-->
-<!--                                <td>7.6</td>-->
-<!--                                <td>15.3</td>-->
-<!--                                <td>9.8</td>-->
-<!--                                <td>12.5</td>-->
-<!--                            </tr>-->
-<!--                        </table>-->
-<!--                        <p> Table 1. Statistics of PQA dataset. </p>-->
-<!--                    </div>-->
-<!--                </div>-->
-<!--              -->
-<!--              </div>-->
+            <h4 class="w3-left-align"><b>Explore</b></h4>
+            <div class="w3-container">
+                <div class="w3-half">
+                    <div class="w3-container">
+                         <p>
+                            Here, by selecting tasks and examples of PQA pair, you can view the dataset more directly.
+                            <br />
+                            Each task has 10 examples respectively.
+                        </p>
+                        <div class="w3-content w3-center w3-half">
+                        <b>Question</b>
+                        </div>
+                        <div class="w3-content w3-center w3-half">
+                        <b>Answer</b>
+                        </div>
+                        <p class="w3-center">
+                        <img id="showQuestion" src="PQA_pair/Closure Filling/1_Q.svg" style="width:220px; height:220px" alt="front" />
+                            &emsp;
+                        <img id="showAnswer" src="PQA_pair/Closure Filling/1_A.svg" style="width:220px; height:220px" alt="front" />
+                        <script>
+                            function change() {
+                                var task = document.getElementById("task-selector");
+                                var image = document.getElementById("image-selector");
+                                document.getElementById("showQuestion").src = "PQA_pair/" + task.value + "/" + image.value + "_Q.svg";
+                                document.getElementById("showAnswer").src = "PQA_pair/" + task.value + "/" + image.value + "_A.svg";
+                            }
+                            function changeTask(task) {
+                                document.getElementById("showQuestion").src = task + "_Q.png";
+                                document.getElementById("showAnswer").src = task + "_A.png";
+                            }
+                            function changeImg(img) {
+                                document.getElementById("showQuestion").src = img + "_Q.png";
+                                document.getElementById("showAnswer").src = img + "_A.png";
+                            }
+                        </script>
+                        </p>
+                    </div>
+                </div>
 
+                <div class="w3-half">
+                    <div class="w3-container">
+                        <p>
+                            There are 7 folder in the dataset root folder each represent one of 7 tasks. Each folder contain 20k
+                            json files.
+                            All file saved with <a href="https://github.com/fchollet/ARC" target="_blank">ARC</a> data format and can be visualized
+                            by <a href="https://github.com/fchollet/ARC/tree/master/apps" target="_blank">ARC visualization tool</a>.
+                        </p>
+                        <div class="w3-code">
+                            Each JSON file contains a dictionary with two fields:
+                            <br>
+                            "train": demonstration input/output pairs. It is a list of "pairs" (typically 7 pairs).
+                            <br>
+                            "test": test input/output pairs. It is a list of "pairs" (typically 3 pair).
+                            <br>
+                            <br>
+                            A "pair" is a dictionary with two fields:
+                            <br>
+                            "input": the input "grid" for the pair.
+                            <br>
+                            "output": the output "grid" for the pair.
+                        </div>
+                    </div>
+                </div>
+            </div>
 
+            <div class="w3-container">
+                <div class="w3-half">
+                    <form class="w3-container w3-center" action="">
+                        <select id="task-selector" onchange="change(this.value)" name="Task" style="width:200px; height:36px" >
+                            <option selected value="Closure Filling">(a)Closure Filling</option>
+                            <option value="Continuity Connection">(b)Continuity Connection</option>
+                            <option value="Proximity Identification">(c)Proximity Identification</option>
+                            <option value="Shape Reconstruction">(d)Shape Reconstruction</option>
+                            <option value="Shape&Pattern Similarity">(e)Shape&Pattern Similarity</option>
+                            <option value="Reflection Symmetry">(f)Reflection Symmetry</option>
+                            <option value="Rotation Symmetry">(g)Rotation Symmetry</option>
+                        </select>
+                        &emsp;&emsp;
+                        <select id="image-selector" onchange="change(this.value)" name="Img" style="width:120px; height:36px">
+                            <option selected value="1">Img1</option>
+                            <option value="2">Img2</option>
+                            <option value="3">Img3</option>
+                            <option value="4">Img4</option>
+                            <option value="5">Img5</option>
+                            <option value="6">Img6</option>
+                            <option value="7">Img7</option>
+                            <option value="8">Img8</option>
+                            <option value="9">Img9</option>
+                            <option value="10">Img10</option>
+                        </select>
+                    </form>
+                </div>
 
-<!--            <p>-->
-<!--                Statistical analysis is provided as shown in Figure 3 and Table 1 above where Avg Symbols indicate the-->
-<!--                number of symbols in a question-grid.-->
-<!--                The x and y coordinates in Figure 3 (a) are normalized to (0,1), corresponding to the center of key regions, -->
-<!--                x-axis and y-axis in Figure 3 (b) correspond to width and height of a grid.-->
-<!--                It basically shows the number of colors that are enough to represent a specified instance of a task.-->
-<!--                For instance, 2 colors in T1 are enough &#45;&#45; one for background and one for the boundary of closure-->
-<!--                region.-->
-<!--                Avg Slots represents the percentage of question-grid needed to be modified to form a correct answer.-->
-<!--            </p>-->
+                <div class="w3-half">
+                    <div class="w3-container">
+                        <a href="template.json" target="_blank">
+                            <button class="w3-btn w3-white w3-border w3-border-blue w3-hover-blue w3-round-large">Explore JSON</button></a>
+                    </div>
+                </div>
 
-            <h3 class="w3-left-align"><b>Framework Overview</b></h3>
+            </div>
+
+            <h4 class="w3-left-align"><b>Statistic</b></h4>
+            <div class="w3-cell-row">
+
+                <div class="w3-container w3-cell w3-cell-middle">
+                    <div class="w3-content w3-center">
+                        <img src="statistic.svg" alt="statistic"  style="width:80%"/>
+                        <p>
+                            Figure 3.
+                            (a) Distribution of key region loca-tions. 
+                            (b) Distribution of grid size.
+                        </p>
+                    </div>
+                </div>
+              
+                <div class="w3-container w3-cell w3-cell-middle">
+                    <div class="w3-content w3-center" style="width:120%" >
+                        <table class="w3-table w3-bordered w3-border">
+                            <tr>
+                                <th>Tasks </th>
+                                <th>T<sup>1</sup></th>
+                                <th>T<sup>2</sup></th>
+                                <th>T<sup>3</sup></th>
+                                <th>T<sup>4</sup></th>
+                                <th>T<sup>5</sup></th>
+                                <th>T<sup>6</sup></th>
+                                <th>T<sup>7</sup></th>
+                            </tr>
+                            <tr>
+                                <td>Avg Symbols</td>
+                                <td>2.0</td>
+                                <td>2.0</td>
+                                <td>5.0</td>
+                                <td>2.0</td>
+                                <td>5.0</td>
+                                <td>3.0</td>
+                                <td>5.0</td>
+                            </tr>
+                            <tr>
+                                <td>Avg Slots (%)</td>
+                                <td>12.9</td>
+                                <td>3.6</td>
+                                <td>4.0</td>
+                                <td>7.6</td>
+                                <td>15.3</td>
+                                <td>9.8</td>
+                                <td>12.5</td>
+                            </tr>
+                        </table>
+                        <p> Table 1. Statistics of PQA dataset. </p>
+                    </div>
+                </div>
+              
+            </div>
+
+            <p>
+                Statistical analysis is provided as shown in Figure 3 and Table 1 above where Avg Symbols indicate the
+                number of symbols in a question-grid.
+                The x and y coordinates in Figure 3 (a) are normalized to (0,1), corresponding to the center of key regions, 
+                x-axis and y-axis in Figure 3 (b) correspond to width and height of a grid.
+                It basically shows the number of colors that are enough to represent a specified instance of a task.
+                For instance, 2 colors in T1 are enough -- one for background and one for the boundary of closure
+                region.
+                Avg Slots represents the percentage of question-grid needed to be modified to form a correct answer.
+            </p>
+
+            <h3 class="w3-left-align"><b>Framework Design</b></h3>
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="network.svg" alt="network" style="width:100%" />
                 <p>
-                    Figure 3.
+                    Figure 4.
                     Our framework. 
                     The encoder takes test question embedding, positional encoding and context embedding as inputs,
                      where context embedding is given by a context encoder, providing clues about the implied law in an example PQA pair, and the positional encoding adapts to the 2D case. 
@@ -147,7 +259,7 @@
             </div>
 
             <p>
-                As shown in Figure 3, our proposed network is an encoder-decoder architecture which is tailored from Transformer.
+                As shown in Figure 4, our proposed network is an encoder-decoder architecture which is tailored from Transformer. 
                 In general, the encoder is a stack of N identical layers, and each layer takes inputs from three sources: 
                 (i) test question embedding (the first layer) or output of last layer (the other layers), (ii) positional encoding and (iii) context embedding.
                 The decoder then generates an answer-grid by predicting all symbols at every location of the grid.
@@ -160,24 +272,24 @@
                 all the color grids are produced in one pass to form an answer instead of one output at a time. 
             </p>
 
-            <h3 class="w3-left-align" id="experiment"><b>Experiment Results</b></h3>
+            <h3 class="w3-left-align" id="publication"><b>Experiment Results</b></h3>
 
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="result.svg" alt="result" style="width:600px" />
-                <p> Figure 4. Testing results on varying training data volume. </p>
+                <p> Figure 5. Testing results on varying training data volume. </p>
             </div>
 
             <div class="w3-content w3-center" style="max-width:850px">
                 <table class="w3-table w3-bordered w3-border">
                     <tr>
                         <th>Method</th>
-                        <th>T1</th>
-                        <th>T2</th>
-                        <th>T3</th>
-                        <th>T4</th>
-                        <th>T5</th>
-                        <th>T6</th>
-                        <th>T7</th>
+                        <th>T<sup>1</sup></th>
+                        <th>T<sup>2</sup></th>
+                        <th>T<sup>3</sup></th>
+                        <th>T<sup>4</sup></th>
+                        <th>T<sup>5</sup></th>
+                        <th>T<sup>6</sup></th>
+                        <th>T<sup>7</sup></th>
                         <th>Avg </th>
                     </tr>
                     <tr>
@@ -260,12 +372,12 @@
                         <td><b>87.76</b></td>
                     </tr>
                 </table>
-                <p>Table 1. Comparison results (%) of models trained on all tasks.</p>
+                <p>Table 2. Comparison results (%) of models trained onall tasks.</p>
             </div>
 
             <p>
                 We observe our method which significantly outperforms other competitors over all tasks.
-                On inspecting performances of every task further individually in Table 1, we realize that T5 is most
+                On inspecting performances of every task further individually in Table2, we realize that T5 is most
                 challenging as all baseline methods fail completely.
                 On the contrary, it is interesting to note that humans can understand and address the questions in T5
                 quite easily.
@@ -281,23 +393,17 @@
                 Compared to other baseline methods however, ours performs the best.
             </p>
 
-            <h3 class="w3-left-align" id="download"><b>Download</b></h3>
+            <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
 
-            <h4 class="w3-left-align" id="github"><b>Source Code</b></h4>
-            <a href="https://github.com/qugank/PQA/code" target="__blank">Github (Implemented by PyTorch)</a>
+            <h4 class="w3-left-align" id="github"><b>Code</b></h4>
+            <a href="https://github.com/qugank/PQA/code" target="__blank">GitHub</a>
             |
             <a href="https://drive.google.com/file/d/1FW2SMdd68U2KpSxTG4QEYQfexVn1KjK2/view?usp=sharing"
                 target="__blank">trained weight</a>
-            |
-            <a href="https://drive.google.com/file/d/18g9LXyhcyHfC-2V_BPPQpXk8FztDkXe7/view?usp=sharing"
-                target="__blank">init weight</a>
 
-            <h4 class="w3-left-align" id="dataset"><b>PQA Dataset</b></h4>
+            <h4 class="w3-left-align" id="dataset"><b>Dataset</b></h4>
             <a href="https://drive.google.com/file/d/1OemRMUogRpvQ257de9JA_4NZJwRLyMLb/view?usp=sharing"
-                target="__blank">latest version (recommended)</a>
-            |
-            <a href="https://drive.google.com/file/d/1Ump44358mfhziPMeEpdDYJHEUne9wcLl/view?usp=sharing"
-                target="__blank">old version</a>
+                target="__blank">download</a>
 
             <p>
                 There are 7 folder in the dataset root folder each represent one of 7 tasks. Each folder contain 20k
