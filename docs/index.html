@@ -31,6 +31,7 @@
                     &nbsp; &nbsp; &nbsp;
                     <sup>2</sup>SketchX, CVSSP, University of Surrey, UK
                 </p>
+                <p>CVPR 2021</p>
                 <div class="w3-content w3-center" style="max-width:850px">
                     <a href="https://github.com/qugank/PQA" target="_blank">
                             <img src="PQA.png" alt="front" style="width:50px"/></a>
@@ -79,14 +80,12 @@
                     visualization.</p>
             </div>
 
-            <h4 class="w3-left-align"><b>Explore</b></h4>
+            <h4 class="w3-left-align"><b>Explore More Data</b></h4>
             <div class="w3-container">
                 <div class="w3-half">
                     <div class="w3-container">
                          <p>
-                            Here, by selecting tasks and examples of PQA pair, you can view the dataset more directly.
-                            <br />
-                            Each task has 10 examples respectively.
+                            We provide more visualized PQA pairs. View them by simply selecting one task and the index of instances.
                         </p>
                         <div class="w3-content w3-center w3-half">
                         <b>Question</b>
@@ -181,77 +180,77 @@
 
             </div>
 
-            <h4 class="w3-left-align"><b>Statistic</b></h4>
-            <div class="w3-cell-row">
+<!--            <h4 class="w3-left-align"><b>Statistic</b></h4>-->
+<!--            <div class="w3-cell-row">-->
 
-                <div class="w3-container w3-cell w3-cell-middle">
-                    <div class="w3-content w3-center">
-                        <img src="statistic.svg" alt="statistic"  style="width:80%"/>
-                        <p>
-                            Figure 3.
-                            (a) Distribution of key region loca-tions. 
-                            (b) Distribution of grid size.
-                        </p>
-                    </div>
-                </div>
-              
-                <div class="w3-container w3-cell w3-cell-middle">
-                    <div class="w3-content w3-center" style="width:120%" >
-                        <table class="w3-table w3-bordered w3-border">
-                            <tr>
-                                <th>Tasks </th>
-                                <th>T<sup>1</sup></th>
-                                <th>T<sup>2</sup></th>
-                                <th>T<sup>3</sup></th>
-                                <th>T<sup>4</sup></th>
-                                <th>T<sup>5</sup></th>
-                                <th>T<sup>6</sup></th>
-                                <th>T<sup>7</sup></th>
-                            </tr>
-                            <tr>
-                                <td>Avg Symbols</td>
-                                <td>2.0</td>
-                                <td>2.0</td>
-                                <td>5.0</td>
-                                <td>2.0</td>
-                                <td>5.0</td>
-                                <td>3.0</td>
-                                <td>5.0</td>
-                            </tr>
-                            <tr>
-                                <td>Avg Slots (%)</td>
-                                <td>12.9</td>
-                                <td>3.6</td>
-                                <td>4.0</td>
-                                <td>7.6</td>
-                                <td>15.3</td>
-                                <td>9.8</td>
-                                <td>12.5</td>
-                            </tr>
-                        </table>
-                        <p> Table 1. Statistics of PQA dataset. </p>
-                    </div>
-                </div>
-              
-            </div>
+<!--                <div class="w3-container w3-cell w3-cell-middle">-->
+<!--                    <div class="w3-content w3-center">-->
+<!--                        <img src="statistic.svg" alt="statistic"  style="width:80%"/>-->
+<!--                        <p>-->
+<!--                            Figure 3.-->
+<!--                            (a) Distribution of key region loca-tions. -->
+<!--                            (b) Distribution of grid size.-->
+<!--                        </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--              -->
+<!--                <div class="w3-container w3-cell w3-cell-middle">-->
+<!--                    <div class="w3-content w3-center" style="width:120%" >-->
+<!--                        <table class="w3-table w3-bordered w3-border">-->
+<!--                            <tr>-->
+<!--                                <th>Tasks </th>-->
+<!--                                <th>T<sup>1</sup></th>-->
+<!--                                <th>T<sup>2</sup></th>-->
+<!--                                <th>T<sup>3</sup></th>-->
+<!--                                <th>T<sup>4</sup></th>-->
+<!--                                <th>T<sup>5</sup></th>-->
+<!--                                <th>T<sup>6</sup></th>-->
+<!--                                <th>T<sup>7</sup></th>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>Avg Symbols</td>-->
+<!--                                <td>2.0</td>-->
+<!--                                <td>2.0</td>-->
+<!--                                <td>5.0</td>-->
+<!--                                <td>2.0</td>-->
+<!--                                <td>5.0</td>-->
+<!--                                <td>3.0</td>-->
+<!--                                <td>5.0</td>-->
+<!--                            </tr>-->
+<!--                            <tr>-->
+<!--                                <td>Avg Slots (%)</td>-->
+<!--                                <td>12.9</td>-->
+<!--                                <td>3.6</td>-->
+<!--                                <td>4.0</td>-->
+<!--                                <td>7.6</td>-->
+<!--                                <td>15.3</td>-->
+<!--                                <td>9.8</td>-->
+<!--                                <td>12.5</td>-->
+<!--                            </tr>-->
+<!--                        </table>-->
+<!--                        <p> Table 1. Statistics of PQA dataset. </p>-->
+<!--                    </div>-->
+<!--                </div>-->
+<!--              -->
+<!--            </div>-->
 
-            <p>
-                Statistical analysis is provided as shown in Figure 3 and Table 1 above where Avg Symbols indicate the
-                number of symbols in a question-grid.
-                The x and y coordinates in Figure 3 (a) are normalized to (0,1), corresponding to the center of key regions, 
-                x-axis and y-axis in Figure 3 (b) correspond to width and height of a grid.
-                It basically shows the number of colors that are enough to represent a specified instance of a task.
-                For instance, 2 colors in T1 are enough -- one for background and one for the boundary of closure
-                region.
-                Avg Slots represents the percentage of question-grid needed to be modified to form a correct answer.
-            </p>
+<!--            <p>-->
+<!--                Statistical analysis is provided as shown in Figure 3 and Table 1 above where Avg Symbols indicate the-->
+<!--                number of symbols in a question-grid.-->
+<!--                The x and y coordinates in Figure 3 (a) are normalized to (0,1), corresponding to the center of key regions, -->
+<!--                x-axis and y-axis in Figure 3 (b) correspond to width and height of a grid.-->
+<!--                It basically shows the number of colors that are enough to represent a specified instance of a task.-->
+<!--                For instance, 2 colors in T1 are enough &#45;&#45; one for background and one for the boundary of closure-->
+<!--                region.-->
+<!--                Avg Slots represents the percentage of question-grid needed to be modified to form a correct answer.-->
+<!--            </p>-->
 
-            <h3 class="w3-left-align"><b>Framework Design</b></h3>
+            <h3 class="w3-left-align"><b>Our Solution</b></h3>
             <div class="w3-content w3-center" style="max-width:850px">
-                <img src="network.svg" alt="network" style="width:100%" />
+                <img src="network.eps" alt="network" style="width:100%" />
                 <p>
                     Figure 4.
-                    Our framework. 
+                    Framework overview.
                     The encoder takes test question embedding, positional encoding and context embedding as inputs,
                      where context embedding is given by a context encoder, providing clues about the implied law in an example PQA pair, and the positional encoding adapts to the 2D case. 
                     The decoder can generate an answer-grid by predicting all symbols at every location in parallel.
@@ -272,7 +271,7 @@
                 all the color grids are produced in one pass to form an answer instead of one output at a time. 
             </p>
 
-            <h3 class="w3-left-align" id="publication"><b>Experiment Results</b></h3>
+            <h3 class="w3-left-align" id="performance"><b>Performance</b></h3>
 
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="result.svg" alt="result" style="width:600px" />
@@ -375,58 +374,58 @@
                 <p>Table 2. Comparison results (%) of models trained onall tasks.</p>
             </div>
 
-            <p>
-                We observe our method which significantly outperforms other competitors over all tasks.
-                On inspecting performances of every task further individually in Table2, we realize that T5 is most
-                challenging as all baseline methods fail completely.
-                On the contrary, it is interesting to note that humans can understand and address the questions in T5
-                quite easily.
-                Similar trend can be found on T6 and T7 as well. On tasks T1 to T4, all competitors perform better than
-                they do on T5 to T7.
-                Furthermore TD+H-CNN achieves result comparable to ours on T4.
-                To further evaluate the training efficiency of each model, we provide different amounts of data for
-                training.
-                We can observe from Figure5 that the scale of training data significantly affects model's performance.
-                Unlike our model, humans can learn the task-specific rule from very limited examples.
-                Basically all methods would nearly fail if we reduce the amount of training data to 15% of PQA pairs per
-                task.
-                Compared to other baseline methods however, ours performs the best.
-            </p>
+<!--            <p>-->
+<!--                We observe our method which significantly outperforms other competitors over all tasks.-->
+<!--                On inspecting performances of every task further individually in Table2, we realize that T5 is most-->
+<!--                challenging as all baseline methods fail completely.-->
+<!--                On the contrary, it is interesting to note that humans can understand and address the questions in T5-->
+<!--                quite easily.-->
+<!--                Similar trend can be found on T6 and T7 as well. On tasks T1 to T4, all competitors perform better than-->
+<!--                they do on T5 to T7.-->
+<!--                Furthermore TD+H-CNN achieves result comparable to ours on T4.-->
+<!--                To further evaluate the training efficiency of each model, we provide different amounts of data for-->
+<!--                training.-->
+<!--                We can observe from Figure5 that the scale of training data significantly affects model's performance.-->
+<!--                Unlike our model, humans can learn the task-specific rule from very limited examples.-->
+<!--                Basically all methods would nearly fail if we reduce the amount of training data to 15% of PQA pairs per-->
+<!--                task.-->
+<!--                Compared to other baseline methods however, ours performs the best.-->
+<!--            </p>-->
 
-            <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>
+<!--            <h3 class="w3-left-align" id="publication"><b>Publication</b></h3>-->
 
-            <h4 class="w3-left-align" id="github"><b>Code</b></h4>
-            <a href="https://github.com/qugank/PQA/code" target="__blank">GitHub</a>
-            |
-            <a href="https://drive.google.com/file/d/1FW2SMdd68U2KpSxTG4QEYQfexVn1KjK2/view?usp=sharing"
-                target="__blank">trained weight</a>
+<!--            <h4 class="w3-left-align" id="github"><b>Code</b></h4>-->
+<!--            <a href="https://github.com/qugank/PQA/code" target="__blank">GitHub</a>-->
+<!--            |-->
+<!--            <a href="https://drive.google.com/file/d/1FW2SMdd68U2KpSxTG4QEYQfexVn1KjK2/view?usp=sharing"-->
+<!--                target="__blank">trained weight</a>-->
 
-            <h4 class="w3-left-align" id="dataset"><b>Dataset</b></h4>
-            <a href="https://drive.google.com/file/d/1OemRMUogRpvQ257de9JA_4NZJwRLyMLb/view?usp=sharing"
-                target="__blank">download</a>
+<!--            <h4 class="w3-left-align" id="dataset"><b>Dataset</b></h4>-->
+<!--            <a href="https://drive.google.com/file/d/1OemRMUogRpvQ257de9JA_4NZJwRLyMLb/view?usp=sharing"-->
+<!--                target="__blank">download</a>-->
 
-            <p>
-                There are 7 folder in the dataset root folder each represent one of 7 tasks. Each folder contain 20k
-                json files.
-                All file saved with <a href="https://github.com/fchollet/ARC">ARC</a> data format and can be visualized
-                by <a href="https://github.com/fchollet/ARC/tree/master/apps">ARC visualization tool</a>.
-            </p>
+<!--            <p>-->
+<!--                There are 7 folder in the dataset root folder each represent one of 7 tasks. Each folder contain 20k-->
+<!--                json files.-->
+<!--                All file saved with <a href="https://github.com/fchollet/ARC">ARC</a> data format and can be visualized-->
+<!--                by <a href="https://github.com/fchollet/ARC/tree/master/apps">ARC visualization tool</a>.-->
+<!--            </p>-->
 
-            <div class="w3-code">
-                Each JSON file contains a dictionary with two fields:
-                <br>
-                "train": demonstration input/output pairs. It is a list of "pairs" (typically 3 pairs).
-                <br>
-                "test": test input/output pairs. It is a list of "pairs" (typically 1 pair).
-                <br>
-                <br>
-                A "pair" is a dictionary with two fields:
-                <br>
-                "input": the input "grid" for the pair.
-                <br>
-                "output": the output "grid" for the pair.
-            </div>
-            <h4 class="w3-left-align" id="paper"><b>Paper</b></h4>
+<!--            <div class="w3-code">-->
+<!--                Each JSON file contains a dictionary with two fields:-->
+<!--                <br>-->
+<!--                "train": demonstration input/output pairs. It is a list of "pairs" (typically 3 pairs).-->
+<!--                <br>-->
+<!--                "test": test input/output pairs. It is a list of "pairs" (typically 1 pair).-->
+<!--                <br>-->
+<!--                <br>-->
+<!--                A "pair" is a dictionary with two fields:-->
+<!--                <br>-->
+<!--                "input": the input "grid" for the pair.-->
+<!--                <br>-->
+<!--                "output": the output "grid" for the pair.-->
+<!--            </div>-->
+            <h4 class="w3-left-align" id="Bib"><b>Bibtex</b></h4>
             
             If this <a href="https://github.com/qugank/PQA" target="__blank">work</a> is useful for you, please cite it:
             <div class="w3-code">
