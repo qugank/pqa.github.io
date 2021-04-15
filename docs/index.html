@@ -31,9 +31,9 @@
                     &nbsp; &nbsp; &nbsp;
                     <sup>2</sup>SketchX, CVSSP, University of Surrey, UK
                 </p>
-                <p>CVPR 2021</p>
+                <p><b>CVPR 2021</b></p>
                 <div class="w3-content w3-center" style="max-width:850px">
-                    <a href="https://github.com/qugank/PQA" target="_blank">
+                    <a href="https://arxiv.org/abs/2104.03589" target="_blank">
                             <img src="PQA.png" alt="front" style="width:50px"/></a>
                     &emsp;&emsp;&emsp;&emsp;&nbsp;&nbsp;
                     <a href="https://drive.google.com/file/d/1OemRMUogRpvQ257de9JA_4NZJwRLyMLb/view?usp=sharing" target="_blank">
@@ -42,11 +42,11 @@
                     <a href="https://github.com/qugank/PQA/code" target="_blank">
                             <img src="github.png" alt="front" style="width:50px"/></a>
                     <p>
-                        <b>Paper</b>
+                        <a href="https://arxiv.org/abs/2104.03589" target="_blank"><b>arXiv</b></a>
                         &emsp;&emsp;&emsp;&emsp;
-                        <b>Dataset</b>
+                        <a href="https://drive.google.com/file/d/1OemRMUogRpvQ257de9JA_4NZJwRLyMLb/view?usp=sharing" target="_blank"><b>Dataset</b></a>
                         &emsp;&emsp;&emsp;&emsp;
-                        <b>Code</b>
+                        <a href="https://github.com/qugank/PQA/code" target="_blank"><b>Code</b></a>
                     </p>
                 </div>
             </div>
@@ -80,12 +80,12 @@
                     visualization.</p>
             </div>
 
-            <h4 class="w3-left-align"><b>Explore More Data</b></h4>
+            <h4 class="w3-left-align"><b>Explore More PQA Pairs</b></h4>
             <div class="w3-container">
                 <div class="w3-half">
                     <div class="w3-container">
-                         <p>
-                            We provide more visualized PQA pairs. View them by simply selecting one task and the index of instances.
+                        <p>
+                            We provide visualization of more PQA pairs below. Simply select a task and an index to view.
                         </p>
                         <div class="w3-content w3-center w3-half">
                         <b>Question</b>
@@ -120,24 +120,30 @@
                 <div class="w3-half">
                     <div class="w3-container">
                         <p>
-                            There are 7 folder in the dataset root folder each represent one of 7 tasks. Each folder contain 20k
-                            json files.
-                            All file saved with <a href="https://github.com/fchollet/ARC" target="_blank">ARC</a> data format and can be visualized
-                            by <a href="https://github.com/fchollet/ARC/tree/master/apps" target="_blank">ARC visualization tool</a>.
+                        <h4>Raw Data Format</h4>
+<!--                            There are 7 folder in the dataset root folder each represent one of 7 tasks. Each folder contain 20k-->
+<!--                            json files.-->
+<!--                            All file saved with <a href="https://github.com/fchollet/ARC" target="_blank">ARC</a> data format and can be visualized-->
+<!--                            by <a href="https://github.com/fchollet/ARC/tree/master/apps" target="_blank">ARC visualization tool</a>.-->
                         </p>
                         <div class="w3-code">
-                            Each JSON file contains a dictionary with two fields:
+                            All PQA pairs are stored in JSON file. Each JSON file contains a dictionary with two fields:
+
                             <br>
-                            "train": demonstration input/output pairs. It is a list of "pairs" (typically 7 pairs).
+                            - "train": a list of exemplar Q/A pairs.
+
                             <br>
-                            "test": test input/output pairs. It is a list of "pairs" (typically 3 pair).
+                            - "test": a list of test Q/A pairs.
                             <br>
                             <br>
-                            A "pair" is a dictionary with two fields:
+                            Each "pair" has two fields:
                             <br>
-                            "input": the input "grid" for the pair.
+                            - "input": a question "grid".
                             <br>
-                            "output": the output "grid" for the pair.
+                            - "output": an output "grid".
+                            <br>
+                            <br>
+                            Each "grid" (width w, height h) is composed of w*h color symbols. Each color symbol is one of 10 pre-defined colors.
                         </div>
                     </div>
                 </div>
@@ -174,7 +180,7 @@
                 <div class="w3-half">
                     <div class="w3-container">
                         <a href="template.json" target="_blank">
-                            <button class="w3-btn w3-white w3-border w3-border-blue w3-hover-blue w3-round-large">Explore JSON</button></a>
+                            <button class="w3-btn w3-white w3-border w3-border-blue w3-hover-blue w3-round-large">An Example of JSON file</button></a>
                     </div>
                 </div>
 
@@ -249,16 +255,16 @@
             <div class="w3-content w3-center" style="max-width:850px">
                 <img src="network.eps" alt="network" style="width:100%" />
                 <p>
-                    Figure 4.
+                    Figure 2.
                     Framework overview.
-                    The encoder takes test question embedding, positional encoding and context embedding as inputs,
-                     where context embedding is given by a context encoder, providing clues about the implied law in an example PQA pair, and the positional encoding adapts to the 2D case. 
-                    The decoder can generate an answer-grid by predicting all symbols at every location in parallel.
+<!--                    The encoder takes test question embedding, positional encoding and context embedding as inputs,-->
+<!--                     where context embedding is given by a context encoder, providing clues about the implied law in an example PQA pair, and the positional encoding adapts to the 2D case. -->
+<!--                    The decoder can generate an answer-grid by predicting all symbols at every location in parallel.-->
                 </p>
             </div>
 
             <p>
-                As shown in Figure 4, our proposed network is an encoder-decoder architecture which is tailored from Transformer. 
+                As shown in Figure 2, our proposed network is an encoder-decoder architecture which is tailored from Transformer.
                 In general, the encoder is a stack of N identical layers, and each layer takes inputs from three sources: 
                 (i) test question embedding (the first layer) or output of last layer (the other layers), (ii) positional encoding and (iii) context embedding.
                 The decoder then generates an answer-grid by predicting all symbols at every location of the grid.
@@ -271,108 +277,119 @@
                 all the color grids are produced in one pass to form an answer instead of one output at a time. 
             </p>
 
-            <h3 class="w3-left-align" id="performance"><b>Performance</b></h3>
+            <h3 class="w3-left-align" id="results"><b>Results</b></h3>
 
-            <div class="w3-content w3-center" style="max-width:850px">
-                <img src="result.svg" alt="result" style="width:600px" />
-                <p> Figure 5. Testing results on varying training data volume. </p>
-            </div>
-
-            <div class="w3-content w3-center" style="max-width:850px">
+            <p>
+                For each question, one credit is given only if all the symbols of the generated answer are correct, i.e., error-free criteria, no credit at all otherwise. The accuracy is thus the percentage of absolute correct answers. Results are shown in Table 1.
+            </p>
+            <div class="w3-content w3-center" style="max-width:650px">
                 <table class="w3-table w3-bordered w3-border">
                     <tr>
                         <th>Method</th>
-                        <th>T<sup>1</sup></th>
-                        <th>T<sup>2</sup></th>
-                        <th>T<sup>3</sup></th>
-                        <th>T<sup>4</sup></th>
-                        <th>T<sup>5</sup></th>
-                        <th>T<sup>6</sup></th>
-                        <th>T<sup>7</sup></th>
+                        <th>T1</th>
+                        <th>T2</th>
+                        <th>T3</th>
+                        <th>T4</th>
+                        <th>T5</th>
+                        <th>T6</th>
+                        <th>T7</th>
                         <th>Avg </th>
                     </tr>
                     <tr>
                         <td>ResNet-34</td>
-                        <td>79.60</td>
-                        <td>17.59</td>
-                        <td>17.95</td>
-                        <td>85.23</td>
+                        <td>79.6</td>
+                        <td>17.6</td>
+                        <td>17.9</td>
+                        <td>85.2</td>
                         <td>0</td>
-                        <td>19.55</td>
-                        <td>0.06</td>
-                        <td>31.43 </td>
+                        <td>19.6</td>
+                        <td>0.1</td>
+                        <td>31.4 </td>
                     </tr>
                     <tr>
 
 
                         <td>ResNet-101</td>
-                        <td>73.93</td>
-                        <td>10.60</td>
-                        <td>0.08</td>
-                        <td>50.89</td>
+                        <td>73.9</td>
+                        <td>10.6</td>
+                        <td>0.1</td>
+                        <td>50.9</td>
                         <td>0</td>
-                        <td>1.65</td>
+                        <td>1.7</td>
                         <td>0</td>
-                        <td>19.59 </td>
+                        <td>19.6 </td>
                     </tr>
                     <tr>
                         <td>LSTM</td>
-                        <td>55.70</td>
-                        <td>23.16</td>
-                        <td>25.61</td>
-                        <td>38.24</td>
+                        <td>55.7</td>
+                        <td>23.2</td>
+                        <td>25.6</td>
+                        <td>38.2</td>
                         <td>0</td>
-                        <td>7.35</td>
-                        <td>2.75</td>
-                        <td>21.83</td>
+                        <td>7.4</td>
+                        <td>2.8</td>
+                        <td>21.8</td>
                     </tr>
                     <tr>
                         <td>bi-LSTM</td>
-                        <td>81.95</td>
-                        <td>26.56</td>
-                        <td>75.61</td>
-                        <td>85.85</td>
+                        <td>81.9</td>
+                        <td>26.6</td>
+                        <td>75.6</td>
+                        <td>85.9</td>
                         <td>0</td>
-                        <td>41.36</td>
-                        <td>23.41</td>
-                        <td>47.82</td>
+                        <td>41.4</td>
+                        <td>23.4</td>
+                        <td>47.8</td>
                     </tr>
                     <tr>
                         <td>Transformer</td>
-                        <td>16.83</td>
-                        <td>11.27</td>
-                        <td>87.42</td>
-                        <td>0.33</td>
+                        <td>16.8</td>
+                        <td>11.3</td>
+                        <td>87.4</td>
+                        <td>0.3</td>
                         <td>0</td>
-                        <td>0.08</td>
+                        <td>0.1</td>
                         <td>0</td>
-                        <td>16.56 </td>
+                        <td>16.7 </td>
                     </tr>
                     <tr>
                         <td>TD+H-CNN</td>
-                        <td> <b> 88.76 </b></td>
-                        <td>89.77</td>
-                        <td>78.76</td>
-                        <td>96.42</td>
+                        <td> <b> 88.8 </b></td>
+                        <td>89.8</td>
+                        <td>78.8</td>
+                        <td>96.4</td>
                         <td>0</td>
-                        <td>50.74</td>
-                        <td>9.31</td>
-                        <td>59.11</td>
+                        <td>50.8</td>
+                        <td>9.3</td>
+                        <td>59.1</td>
                     </tr>
                     <tr>
                         <td>Ours</td>
-                        <td>82.60</td>
-                        <td><b>97.64</b></td>
-                        <td><b>93.66</b></td>
-                        <td><b>96.88</b></td>
-                        <td><b>61.83</b></td>
-                        <td><b>82.69</b></td>
-                        <td><b>98.99</b></td>
-                        <td><b>87.76</b></td>
+                        <td>82.6</td>
+                        <td><b>97.6</b></td>
+                        <td><b>93.7</b></td>
+                        <td><b>96.9</b></td>
+                        <td><b>61.8</b></td>
+                        <td><b>82.7</b></td>
+                        <td><b>98.9</b></td>
+                        <td><b>87.8</b></td>
                     </tr>
                 </table>
-                <p>Table 2. Comparison results (%) of models trained onall tasks.</p>
+                <p>Table 1. Comparison results (%) of models trained on all tasks.</p>
             </div>
+
+            <p>To further evaluate the training efficiency of each model, we provide different amounts of data for training.
+                We can observe from Figure 3 that the scale of training data significantly affects model's performance.
+                Unlike our model, humans can learn the task-specific rule from very limited examples.
+                This clearly signifies just how unexplored this topic is, and in turn encourages future research to progress towards human-level intelligence.
+            </p>
+
+            <div class="w3-content w3-center" style="max-width:850px">
+                <img src="result.svg" alt="result" style="width:600px" />
+                <p> Figure 3. Testing results on varying training data volume. </p>
+            </div>
+
+
 
 <!--            <p>-->
 <!--                We observe our method which significantly outperforms other competitors over all tasks.-->
