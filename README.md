@@ -1,5 +1,5 @@
 # PQA: Perceptual Question Answering
-This is the official implementation (PyTorch) of PQA: Perceptual Question Answering
+This is the official implementation (PyTorch) of PQA: Perceptual Question Answering https://arxiv.org/abs/2104.03589
 
 Please refer to the <a href="https://qugank.github.io/" target="_blank">project page</a> for more details.
 
