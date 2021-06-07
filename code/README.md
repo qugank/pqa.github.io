@@ -1,8 +1,8 @@
 # Training Manual
 
-## download dataset and weight
+## download dataset and trained model
 
-please see https://qugank.github.io/pqa.github.io
+please see the <a href="https://qugank.github.io/pqa.github.io" target="_blank">project page<a> to download the dataset and trained model.
 
 ## setup environment 
 
