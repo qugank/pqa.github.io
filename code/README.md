@@ -2,8 +2,10 @@
 
 ## download dataset and trained model
 
-please see the <a href="https://qugank.github.io/pqa.github.io" target="_blank">project page<a> to download the dataset and trained model.
+please see the <a href="https://qugank.github.io/pqa.github.io" target="_blank">project page<a> to download the dataset.
 
+please see the <a href="https://drive.google.com/file/d/1FW2SMdd68U2KpSxTG4QEYQfexVn1KjK2/view?usp=sharing" target="_blank">trained weight<a> to download the trained model.
+  
 ## setup environment 
 
 setup environment via conda
