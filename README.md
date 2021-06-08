@@ -1,7 +1,12 @@
 # PQA: Perceptual Question Answering
 This is the official implementation (PyTorch) of PQA: Perceptual Question Answering https://arxiv.org/abs/2104.03589
 
-Please refer to the <a href="https://qugank.github.io/pqa.github.io/" target="_blank">project page</a> for more details.
+Please check the <a href="https://qugank.github.io/pqa.github.io/" target="_blank">project page</a> for more details.
+
+The challenge of Perceptual Question and Answer (PQA). Given an ex-emplar PQA pair (Left), a new question (right) is required to be addressed, i.e. generate answer-grid from scratch.
+![avatar](./docs/front-v2.svg)
+
+
 
 Please cite our work if this work is useful for you. Bibtex:
 
